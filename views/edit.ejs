@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LIST</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-logo">LIST</a>
+    </header>
+    <div class="container">
+      <div class="container-header">
+        <h1>Edit Barang</h1>
+      </div>
+      <div class="item-form-wrapper">
+        <form action="/update/<%= item.id_produk %>" method="post">
+          <!-- Tambahkan attribute name -->
+          <p class="form-label">Produk apa yang ingin Anda Update?</p>
+          <input name="itemName" type="text" value="<%= item.nama_produk %>">
+          <p class="form-label">Tulis Keterangan yang ingin Anda Update?</p>
+          <input name="itemKeterangan" type="text" value="<%= item.keterangan %>">
+          <p class="form-label">Berapa Harga Produk yang ingin Anda Update?</p>
+          <input name="itemHarga" type="text" value="<%= item.harga %>">
+          <p class="form-label">Berapa Stok produk yang ingin anda Update?</p>
+          <input name="itemJumlah" type="text" value="<%= item.jumlah %>">
+          <input type="submit" value="Perbarui">
+        </form>
+      </div>
+      <a href="/index" class="cancel-button">Kembali</a>
+    </div>
+  </body>
+</html>
